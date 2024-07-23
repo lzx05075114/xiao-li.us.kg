@@ -1,0 +1,23 @@
+const express = require('express');
+const path = require('path');
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// 处理静态文件
+app.use(express.static(path.join(__dirname, 'public')));
+
+// 首页路由
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'index.html'));
+});
+
+// 博客文章路由
+app.get('/post/:id', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'post.html'));
+});
+
+// 启动服务器
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
