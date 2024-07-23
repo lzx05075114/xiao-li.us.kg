@@ -1,0 +1,15 @@
+my-blog/
+│
+├── public/
+│   ├── css/
+│   │   └── styles.css
+│   └── js/
+│       └── script.js
+│
+├── views/
+│   ├── index.html
+│   └── post.html
+│
+├── server.js
+├── package.json
+└── README.md
